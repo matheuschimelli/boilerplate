@@ -1,0 +1,41 @@
+{
+  "name": "boilerplate",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "dev": "cross-env NODE_ENV=development nodemon index.js --watch src",
+    "start": "cross-env NODE_ENV=production node index.js",
+    "prisma:create": "yarn prisma migrate save --name init --experimental",
+    "prisma:migrate": "yarn prisma migrate up --experimental"
+  },
+  "devDependencies": {
+    "@prisma/cli": "2.0.0-beta.8",
+    "eslint": "^7.2.0",
+    "eslint-config-standard": "^14.1.1",
+    "eslint-plugin-import": "^2.20.2",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-standard": "^4.0.1",
+    "nodemon": "^2.0.4"
+  },
+  "dependencies": {
+    "@prisma/client": "2.0.0-beta.8",
+    "apollo-server-express": "^2.14.2",
+    "body-parser": "^1.19.0",
+    "compression": "^1.7.4",
+    "cors": "^2.8.5",
+    "cross-env": "^7.0.2",
+    "dotenv": "^8.2.0",
+    "errorhandler": "^1.5.1",
+    "esm": "^3.2.25",
+    "express": "^4.17.1",
+    "express-session": "^1.17.1",
+    "helmet": "^3.22.0",
+    "moment": "^2.26.0",
+    "passport": "^0.4.1",
+    "passport-google-oauth": "^2.0.0",
+    "passport-local": "^1.0.0",
+    "passport-oauth2-refresh": "^2.0.0"
+  }
+}
